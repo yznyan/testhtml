@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log out ...</title>
+    <script>
+        function clearCookies(domain) {
+            const cookies = document.cookie.split(";");
+
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i];
+                const eqPos = cookie.indexOf("=");
+                const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=" + domain;
+            }
+        }
+
+        window.onload = function() {
+            // Clear all cookies for the specified domain
+            clearCookies('devpre65.adsystechdev.com');
+            
+            // Redirect to the desired URL after clearing the cookies
+            window.location.href = 'ecmadsystech.com:/oauthredirect';
+    </script>
+</head>
+<body>
+    <p>Log out ...</p>
+</body>
+</html>
