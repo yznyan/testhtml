@@ -25,7 +25,10 @@
             deleteMultipleCookies(cookiesToDelete, targetDomain, targetPath);
             // Redirect to the desired URL after clearing the cookies
            //window.location.href = 'ecmadsystech.com:/oauthredirect';
-           window.close();
+            setTimeout(() => {
+     window.close();
+}, 5000);
+         
         }
     </script>
 </head>
